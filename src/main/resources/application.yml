@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: sb-gcp
+    
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+    
+management:
+  security:
+    enabled: false
+  context-path: /_ah
+  

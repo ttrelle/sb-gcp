@@ -1,0 +1,25 @@
+service: sb-gcp
+
+runtime: java
+env: flex
+
+runtime_config:
+  jdk: openjdk8
+
+handlers:
+- url: /.*
+  script: this field is required, but ignored
+
+manual_scaling:
+  instances: 1
+
+health_check:
+  enable_health_check: True
+  check_interval_sec: 30
+  timeout_sec: 10
+  unhealthy_threshold: 5
+  healthy_threshold: 1
+  restart_threshold: 100
+
+env_variables:
+  SPRING_DATA_MONGODB_URI: mongodb://mongodb-1-server-1:27017,mongodb-1-server-2:27017,mongodb-1-arbiter-1:27017/test?replicaSet=rs01
