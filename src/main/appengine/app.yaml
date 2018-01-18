@@ -1,17 +1,13 @@
-service: sb-gcp
+service: sb-gcp # Id of the service
 
-runtime: java
-env: flex
-
+env: flex       # Flex environment
+runtime: java   # Java runtime
 runtime_config:
-  jdk: openjdk8
+  jdk: openjdk8 # use OpenJDK 8
 
 handlers:
 - url: /.*
   script: this field is required, but ignored
-
-manual_scaling:
-  instances: 1
 
 health_check:
   enable_health_check: true
@@ -20,4 +16,4 @@ health_check:
   healthy_threshold: 1
 
 env_variables:
-  SPRING_DATA_MONGODB_URI: mongodb://IP_1:27017,IP_2:27017,IP_3:27017/test?replicaSet=rs0
+  SPRING_DATA_MONGODB_URI: mongodb://10.156.0.3:27017,10.156.0.6:27017,10.156.0.5:27017/test?replicaSet=rs0

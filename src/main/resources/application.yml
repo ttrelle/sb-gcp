@@ -9,7 +9,8 @@ spring:
       base-path: /api
     
 management:
-  security:
+   context-path: /_ah
+   security:
     enabled: false
-  context-path: /_ah
+
   
