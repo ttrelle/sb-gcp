@@ -11,5 +11,5 @@ import de.codecentric.gcp.domain.PointOfInterest;
  */
 @RestResource(path="/pois")
 public interface PointOfInterestRepository extends MongoRepository<PointOfInterest, String> {
-	// only std crud ops
+	// only standard crud operations
 }
