@@ -15,7 +15,7 @@ $ docker-compose up
 To import the database dump from the [data](data) folder run
 
 ```
-docker-compose exec mongorestore /import/pois.bson
+docker-compose exec mongodb mongorestore /import/pois.bson
 ```
 
 ## Run & test the Application
